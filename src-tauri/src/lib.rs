@@ -5,7 +5,7 @@ use std::env;
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     dotenv().ok();
-    let app_url = env::var("APP_URL").unwrap_or_default();
+    let app_url = env::var("APP_URL").unwrap_or_else(|_| "http://guardias.arpb.mil".to_string());
     println!("APP_URL: {}", app_url);
     if app_url.starts_with("http") {
         tauri::Builder::default()
