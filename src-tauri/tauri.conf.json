@@ -23,6 +23,7 @@
   },
   "bundle": {
     "resources": [
+      ".env",
       "../habilitarTLS-W7.reg",
       "../aplicar-tls.cmd"
     ],
